@@ -72,4 +72,5 @@ dependencies {
     implementation(libs.timber)
 
     implementation(projects.core.presentation.designsystem)
+    implementation(projects.auth.presentation)
 }

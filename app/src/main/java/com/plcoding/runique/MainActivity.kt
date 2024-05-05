@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import it.thefedex87.auth.presentation.IntroScreen
+import it.thefedex87.auth.presentation.IntroScreenRoot
 import it.thefedex87.core.presentation.designsystem.AnalyticsIcon
 import it.thefedex87.core.presentation.designsystem.RuniqueTheme
 
@@ -24,7 +26,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Icon(imageVector = AnalyticsIcon, contentDescription = null)
+                    IntroScreenRoot(
+                        onSignUpClick = {},
+                        onSignInClick = {}
+                    )
                 }
             }
         }
