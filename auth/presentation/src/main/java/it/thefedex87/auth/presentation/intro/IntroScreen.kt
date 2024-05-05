@@ -1,4 +1,4 @@
-package it.thefedex87.auth.presentation
+package it.thefedex87.auth.presentation.intro
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,6 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import it.thefedex87.auth.presentation.R
 import it.thefedex87.core.presentation.designsystem.LogoIcon
 import it.thefedex87.core.presentation.designsystem.RuniqueTheme
 import it.thefedex87.core.presentation.designsystem.components.GradientBackground

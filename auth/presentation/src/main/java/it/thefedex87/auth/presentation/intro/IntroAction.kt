@@ -1,4 +1,4 @@
-package it.thefedex87.auth.presentation
+package it.thefedex87.auth.presentation.intro
 
 sealed interface IntroAction {
     data object OnSignInClick: IntroAction
