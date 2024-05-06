@@ -4,6 +4,7 @@ import android.app.Application
 import com.plcoding.runique.di.appModule
 import it.thefedex87.auth.data.di.authDataModule
 import it.thefedex87.auth.presentation.di.authViewModelModule
+import it.thefedex87.core.data.di.coreDataModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -22,7 +23,8 @@ class RuniqueApp: Application() {
             modules(
                 authDataModule,
                 authViewModelModule,
-                appModule
+                appModule,
+                coreDataModule
             )
         }
     }

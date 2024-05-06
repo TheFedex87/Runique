@@ -79,4 +79,6 @@ dependencies {
     implementation(projects.auth.presentation)
     implementation(projects.auth.domain)
     implementation(projects.auth.data)
+
+    implementation(projects.core.data)
 }

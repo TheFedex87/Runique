@@ -1,4 +1,4 @@
-package it.thefedex87.core.data
+package it.thefedex87.core.data.networking
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -10,6 +10,7 @@ import io.ktor.client.request.setBody
 import io.ktor.client.request.url
 import io.ktor.client.statement.HttpResponse
 import io.ktor.util.network.UnresolvedAddressException
+import it.thefedex87.core.data.BuildConfig
 import it.thefedex87.core.domain.DataError
 import kotlinx.coroutines.CancellationException
 import kotlinx.serialization.SerializationException
