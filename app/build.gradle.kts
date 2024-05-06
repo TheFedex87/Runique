@@ -55,6 +55,9 @@ dependencies {
 
     api(libs.core)
 
+    // Koin
+    implementation(libs.bundles.koin)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -72,5 +75,8 @@ dependencies {
     implementation(libs.timber)
 
     implementation(projects.core.presentation.designsystem)
+
     implementation(projects.auth.presentation)
+    implementation(projects.auth.domain)
+    implementation(projects.auth.data)
 }
