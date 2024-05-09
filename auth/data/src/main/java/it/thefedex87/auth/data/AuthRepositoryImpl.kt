@@ -3,8 +3,8 @@ package it.thefedex87.auth.data
 import io.ktor.client.HttpClient
 import it.thefedex87.auth.domain.AuthRepository
 import it.thefedex87.core.data.networking.post
-import it.thefedex87.core.domain.DataError
-import it.thefedex87.core.domain.EmptyResult
+import it.thefedex87.core.domain.util.DataError
+import it.thefedex87.core.domain.util.EmptyResult
 
 class AuthRepositoryImpl(
     private val httpClient: HttpClient

@@ -1,6 +1,6 @@
 package it.thefedex87.core.presentation.ui
 
-import it.thefedex87.core.domain.DataError
+import it.thefedex87.core.domain.util.DataError
 
 fun DataError.asUiText(): UiText {
     return when(this) {

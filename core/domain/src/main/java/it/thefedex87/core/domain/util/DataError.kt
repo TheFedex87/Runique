@@ -1,4 +1,4 @@
-package it.thefedex87.core.domain
+package it.thefedex87.core.domain.util
 
 sealed interface DataError: Error {
     enum class Network: DataError {

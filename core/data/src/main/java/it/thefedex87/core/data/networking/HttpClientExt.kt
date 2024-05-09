@@ -11,10 +11,10 @@ import io.ktor.client.request.url
 import io.ktor.client.statement.HttpResponse
 import io.ktor.util.network.UnresolvedAddressException
 import it.thefedex87.core.data.BuildConfig
-import it.thefedex87.core.domain.DataError
+import it.thefedex87.core.domain.util.DataError
 import kotlinx.coroutines.CancellationException
 import kotlinx.serialization.SerializationException
-import it.thefedex87.core.domain.Result
+import it.thefedex87.core.domain.util.Result
 
 suspend inline fun <reified Response: Any> HttpClient.get(
     route: String,

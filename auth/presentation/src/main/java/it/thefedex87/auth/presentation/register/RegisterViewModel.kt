@@ -1,4 +1,3 @@
-@file:Suppress("OPT_IN_USAGE_FUTURE_ERROR")
 @file:OptIn(ExperimentalFoundationApi::class)
 
 package it.thefedex87.auth.presentation.register
@@ -13,14 +12,14 @@ import androidx.lifecycle.viewModelScope
 import it.thefedex87.auth.domain.AuthRepository
 import it.thefedex87.auth.domain.UserDataValidator
 import it.thefedex87.auth.presentation.R
-import it.thefedex87.core.domain.DataError
+import it.thefedex87.core.domain.util.DataError
 import it.thefedex87.core.presentation.ui.UiText
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import it.thefedex87.core.domain.Result
+import it.thefedex87.core.domain.util.Result
 import it.thefedex87.core.presentation.ui.asUiText
 
 class RegisterViewModel(
