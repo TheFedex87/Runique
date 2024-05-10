@@ -1,9 +1,10 @@
-@file:OptIn(ExperimentalFoundationApi::class)
+@file:OptIn(ExperimentalFoundationApi::class, ExperimentalFoundationApi::class)
 
 package it.thefedex87.auth.presentation.login
 
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -19,6 +20,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
@@ -92,7 +94,7 @@ private fun LoginScreen(
         Column(
             modifier = Modifier
                 .verticalScroll(rememberScrollState())
-                .fillMaxSize()
+                .weight(1f)
                 .padding(horizontal = 16.dp)
                 .padding(vertical = 32.dp)
                 .padding(top = 16.dp)
@@ -113,8 +115,8 @@ private fun LoginScreen(
             RuniqueTextField(
                 state = state.email,
                 startIcon = EmailIcon,
-                keyboardType = KeyboardType.Email,
                 endIcon = null,
+                keyboardType = KeyboardType.Email,
                 hint = stringResource(id = R.string.example_email),
                 title = stringResource(id = R.string.email),
                 modifier = Modifier.fillMaxWidth()
@@ -139,7 +141,6 @@ private fun LoginScreen(
                     onAction(LoginAction.OnLoginClick)
                 },
             )
-
             val annotatedString = buildAnnotatedString {
                 withStyle(
                     style = SpanStyle(
@@ -163,6 +164,7 @@ private fun LoginScreen(
                     }
                 }
             }
+
             Box(
                 modifier = Modifier
                     .align(Alignment.CenterHorizontally)

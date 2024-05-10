@@ -82,7 +82,13 @@ fun RegisterScreenRoot(
 
     RegisterScreen(
         state = viewModel.state,
-        onAction = viewModel::onAction
+        onAction = {
+            if(it is RegisterAction.OnLoginClick) {
+                onSignInClick()
+            } else {
+                viewModel.onAction(it)
+            }
+        }
     )
 }
 

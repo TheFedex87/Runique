@@ -81,4 +81,5 @@ dependencies {
     implementation(projects.auth.data)
 
     implementation(projects.core.data)
+    implementation(projects.core.domain)
 }
