@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalFoundationApi::class)
+
 package it.thefedex87.auth.presentation.register
 
 import android.widget.Toast
@@ -84,7 +86,6 @@ fun RegisterScreenRoot(
     )
 }
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun RegisterScreen(
     state: RegisterState,
