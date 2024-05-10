@@ -8,6 +8,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import it.thefedex87.auth.presentation.intro.IntroScreenRoot
+import it.thefedex87.auth.presentation.login.LoginScreenRoot
 import it.thefedex87.auth.presentation.register.RegisterScreenRoot
 
 @Composable
@@ -19,6 +20,7 @@ fun NavigationRoot(
         startDestination = "auth"
     ) {
         authGraph(navController)
+        run(navController)
     }
 }
 
@@ -54,7 +56,35 @@ private fun NavGraphBuilder.authGraph(navController: NavHostController) {
             )
         }
         composable(route = "login") {
-            Text(text = "Login")
+            LoginScreenRoot(
+                onLoginSuccess = {
+                    navController.navigate("run") {
+                        popUpTo("auth") {
+                            inclusive = true
+                        }
+                    }
+                },
+                onSignUpClick = {
+                    navController.navigate("register") {
+                        popUpTo("login") {
+                            inclusive = true
+                            saveState = true
+                        }
+                        restoreState = true
+                    }
+                }
+            )
+        }
+    }
+}
+
+private fun NavGraphBuilder.run(navController: NavHostController) {
+    navigation(
+        startDestination = "run_overview",
+        route = "run"
+    ) {
+        composable("run_overview") {
+            Text(text = "Run Overview!!!")
         }
     }
 }
