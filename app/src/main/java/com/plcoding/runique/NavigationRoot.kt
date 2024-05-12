@@ -10,6 +10,7 @@ import androidx.navigation.navigation
 import it.thefedex87.auth.presentation.intro.IntroScreenRoot
 import it.thefedex87.auth.presentation.login.LoginScreenRoot
 import it.thefedex87.auth.presentation.register.RegisterScreenRoot
+import it.thefedex87.run.presentation.run_overview.RunOverviewScreenRoot
 
 @Composable
 fun NavigationRoot(
@@ -85,7 +86,7 @@ private fun NavGraphBuilder.run(navController: NavHostController) {
         route = "run"
     ) {
         composable("run_overview") {
-            Text(text = "Run Overview!!!")
+            RunOverviewScreenRoot()
         }
     }
 }
