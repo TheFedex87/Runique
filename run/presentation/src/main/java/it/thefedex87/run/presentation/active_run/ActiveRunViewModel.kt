@@ -22,6 +22,7 @@ class ActiveRunViewModel(
     private val eventChannel = Channel<ActiveRunEvent>()
     val events = eventChannel.receiveAsFlow()
 
+
     private val _hasLocationPermission = MutableStateFlow(false)
 
     init {
@@ -32,13 +33,6 @@ class ActiveRunViewModel(
                 } else {
                     runningTracker.stopObservingLocation()
                 }
-            }
-            .launchIn(viewModelScope)
-
-        runningTracker
-            .currentLocation
-            .onEach { location ->
-                Timber.d("New location: $location")
             }
             .launchIn(viewModelScope)
     }
