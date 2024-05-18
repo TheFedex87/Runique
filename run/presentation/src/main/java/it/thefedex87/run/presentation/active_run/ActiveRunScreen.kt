@@ -31,6 +31,7 @@ import it.thefedex87.core.presentation.designsystem.components.RuniqueScaffold
 import it.thefedex87.core.presentation.designsystem.components.RuniqueToolbar
 import it.thefedex87.run.presentation.R
 import it.thefedex87.run.presentation.active_run.components.RunDataCard
+import it.thefedex87.run.presentation.active_run.maps.TrackerMap
 import it.thefedex87.run.presentation.util.hasLocationPermission
 import it.thefedex87.run.presentation.util.hasNotificationPermission
 import it.thefedex87.run.presentation.util.shouldShowLocationPermissionRationale
@@ -139,6 +140,14 @@ fun ActiveRunScreen(
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.surface)
         ) {
+            TrackerMap(
+                isRunFinished = state.isRunFinished,
+                currentLocation = state.currentLocation,
+                locations = state.runData.locations,
+                onSnapshot = {},
+                modifier = Modifier
+                    .fillMaxSize()
+            )
             RunDataCard(
                 elapsedTime = state.elapsedTime,
                 runData = state.runData,
